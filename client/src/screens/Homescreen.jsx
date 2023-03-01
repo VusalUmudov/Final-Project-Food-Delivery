@@ -8,6 +8,7 @@ import Drink from '../components/Drink'
 import Loading from '../components/Loading'
 import Error from '../components/Error'
 import Slider from '../components/Slider'
+import {Helmet, HelmetProvider} from 'react-helmet-async'
 
 function Homescreen() {
 
@@ -28,6 +29,12 @@ function Homescreen() {
 
     return (
         <div className='App'>
+            <HelmetProvider>
+                <Helmet>
+                    <meta charSet='utf-8'/>
+                    <title>Home Page</title>
+                </Helmet>
+            </HelmetProvider>
             <Navbar />
             <main className='main-container'>
                 <div className="container">

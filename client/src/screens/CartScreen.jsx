@@ -1,5 +1,6 @@
 import { Delete } from '@mui/icons-material'
 import React from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, deleteFromCart } from '../actions/cartActions'
 import Checkout from '../components/Checkout'
@@ -12,6 +13,12 @@ function CartScreen() {
   const dispatch = useDispatch()
   return (
     <div>
+           <HelmetProvider>
+                <Helmet>
+                    <meta charSet='utf-8'/>
+                    <title>Cart Page</title>
+                </Helmet>
+            </HelmetProvider>
       <Navbar />
       <div className='cart-container'>
         <div className="container">

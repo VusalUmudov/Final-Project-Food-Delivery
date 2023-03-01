@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -15,6 +16,12 @@ export default function Adminscreen() {
 
   return (
     <div>
+      <HelmetProvider>
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>Admin Page</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="row justify-content-center p-3">
         <div className="col-md-10">
           <h2 style={{ fontSize: "35px" }}>Admin Panel</h2>

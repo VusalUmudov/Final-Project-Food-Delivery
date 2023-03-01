@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserOrders } from '../actions/orderActions'
 import Error from "../components/Error";
@@ -19,6 +20,12 @@ export default function Ordersscreen() {
 
     return (
         <div>
+            <HelmetProvider>
+                <Helmet>
+                    <meta charSet='utf-8' />
+                    <title>Order Page</title>
+                </Helmet>
+            </HelmetProvider>
             <Navbar />
             <section className='order-container'>
                 <div className='container'>

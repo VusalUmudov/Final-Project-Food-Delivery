@@ -6,6 +6,7 @@ import { registerUser } from '../actions/userActions';
 import Navbar from '../components/Navbar';
 import Error from '../components/Error'
 import Success from '../components/Success'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 function RegisterScreen() {
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
@@ -33,6 +34,12 @@ function RegisterScreen() {
 
     return (
         <div>
+            <HelmetProvider>
+                <Helmet>
+                    <meta charSet='utf-8' />
+                    <title>Register Page</title>
+                </Helmet>
+            </HelmetProvider>
             <Navbar />
             <section className='login-container'>
                 <div className='container'>
@@ -95,10 +102,5 @@ function RegisterScreen() {
     )
 }
 
-
-/**
- * 
- * 
- */
 
 export default RegisterScreen

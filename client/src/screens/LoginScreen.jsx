@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../actions/userActions';
@@ -27,6 +28,12 @@ function LoginScreen() {
 
   return (
     <div>
+      <HelmetProvider>
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>Login Page</title>
+        </Helmet>
+      </HelmetProvider>
       <Navbar />
       <section className='login-container'>
         <div className='container'>
