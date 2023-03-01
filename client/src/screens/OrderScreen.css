@@ -1,0 +1,40 @@
+.order-container {
+    background-image: url(.././images/orderr-delivery.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+.order-container .container {
+    flex-direction: column;
+}
+
+.order-container .container h3 {
+    color: #fff;
+}
+
+.order-container .container h2 {
+    color: #fff;
+}
+
+.order-items {
+    display: flex;
+}
+
+.orders {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.orders-container {
+    border: 2px solid #F87100;
+    color: #fff;
+    width: 100%;
+    height: auto;
+}
